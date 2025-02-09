@@ -25,17 +25,10 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of your cool projects.",
+          description: "Research Projects I am passionate about",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
-          },
-        },{id: "nav-repositories",
-          title: "repositories",
-          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/repositories/";
           },
         },{id: "nav-cv",
           title: "cv",
@@ -44,42 +37,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-teaching",
-          title: "teaching",
-          description: "Materials for courses you taught. Replace this text with your description.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/teaching/";
-          },
-        },{id: "nav-people",
-          title: "people",
-          description: "members of the lab or group",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/people/";
-          },
-        },{id: "dropdown-publications",
-              title: "publications",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "dropdown-projects",
-              title: "projects",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "dropdown-blog",
-              title: "blog",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/blog/";
-              },
-            },{id: "post-a-post-with-image-galleries",
+        },{id: "post-a-post-with-image-galleries",
       
         title: "a post with image galleries",
       
@@ -431,62 +389,50 @@ ninja.data = [{
           window.location.href = "/blog/2015/formatting-and-links/";
         
       },
-    },{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+    },{id: "news-i-ve-joined-iisc-as-a-predoctoral-research-fellow",
+          title: 'I’ve joined IISc as a Predoctoral Research Fellow',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-paper-accepted-at-corl-2024-langrob-workshop-munich-germany",
+          title: 'Paper accepted at CoRL 2024 LangRob workshop, Munich, Germany',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-paper-accepted-at-indian-control-conference-2024-iiser-bhopal",
+          title: 'Paper accepted at Indian Control Conference 2024, IISER Bhopal',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-explainable-rl",
+          title: 'Explainable RL',
+          description: "solving atari games with neurosymbolic explainable plans",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+              window.location.href = "/projects/AIML/";
+            },},{id: "projects-hinglishlm",
+          title: 'HinglishLM',
+          description: "Experimenting with Language Models on Hinglish data",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+              window.location.href = "/projects/HinglishLM/";
+            },},{id: "projects-human-interactive-robotics",
+          title: 'Human interactive Robotics',
+          description: "Using natural language to correct robot paths",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+              window.location.href = "/projects/IISC/";
+            },},{id: "projects-mindsync",
+          title: 'MindSync',
+          description: "EEG to text translation",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
+              window.location.href = "/projects/MindSync/";
+            },},{id: "projects-bachelor-39-s-thesis-major-technical-project",
+          title: 'Bachelor&amp;#39;s Thesis (Major Technical Project)',
+          description: "Executing robot skills by learning them from human video demonstrations",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
+              window.location.href = "/projects/Thesis/";
+            },},{id: "projects-rrc-intern",
+          title: 'RRC intern',
+          description: "video object detection on BDD100K",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
+              window.location.href = "/projects/VodTA/";
+            },},{id: "projects-autonomous-wheelchair",
+          title: 'Autonomous Wheelchair',
+          description: "2D and 3D navigation of a robotic wheelchair",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
+              window.location.href = "/projects/Wheelchair/";
             },},{
         id: 'social-email',
         title: 'email',
