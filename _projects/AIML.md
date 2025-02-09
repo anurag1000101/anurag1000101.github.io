@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
+title: Explainable RL
+description: solving atari games with neurosymbolic explainable plans
 img: assets/img/1.jpg
 importance: 3
-category: fun
+category: work
 ---
 
 Every project has a beautiful feature showcase page.

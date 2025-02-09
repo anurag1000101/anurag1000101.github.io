@@ -1,10 +1,11 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
+title: Bachelor's Thesis (Major Technical Project)
+description: Executing robot skills by learning them from human video demonstrations
+img: assets/img/7.jpg
+redirect: https://unsplash.com
 importance: 3
-category: fun
+category: work
 ---
 
 Every project has a beautiful feature showcase page.

@@ -1,9 +1,8 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+title: Autonomous Wheelchair
+description: 2D and 3D navigation of a robotic wheelchair
+img:
 importance: 3
 category: work
 ---
