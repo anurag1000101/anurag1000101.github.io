@@ -3,7 +3,6 @@ layout: page
 title: Bachelor's Thesis (Major Technical Project)
 description: Executing robot skills by learning them from human video demonstrations
 img: assets/img/7.jpg
-redirect: https://unsplash.com
 importance: 3
 category: work
 ---
