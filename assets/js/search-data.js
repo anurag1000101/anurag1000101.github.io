@@ -81,17 +81,6 @@ ninja.data = [{
           window.location.href = "/blog/2024/typograms/";
         
       },
-    },{id: "post-a-post-that-can-be-cited",
-      
-        title: "a post that can be cited",
-      
-      description: "this is what a post that can be cited looks like",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2024/post-citation/";
-        
-      },
     },{id: "post-a-post-with-pseudo-code",
       
         title: "a post with pseudo code",
@@ -101,6 +90,17 @@ ninja.data = [{
       handler: () => {
         
           window.location.href = "/blog/2024/pseudocode/";
+        
+      },
+    },{id: "post-technical-induction-programme",
+      
+        title: "Technical Induction Programme",
+      
+      description: "An initiative to bridge the gap between academics and skills",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2024/post-TIP/";
         
       },
     },{id: "post-a-post-with-code-diff",
