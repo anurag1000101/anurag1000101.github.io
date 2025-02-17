@@ -40,7 +40,7 @@ I am eager to collaborate on topics that explore the intersection of robotics, h
   - Inspired by the work at the [Centre of Brains, Minds, and Machines](https://cbmm.mit.edu/), I am passionate about creating systems that emulate human-integrated planning.
 
 - **Interfacing brains and learning-based models**
-  - This includes exciting work like [LaBram](https://arxiv.org/abs/2405.18765).
+  - This includes interfacing brain waves with learning based models. Have a look at these:[LaBram](https://arxiv.org/abs/2405.18765), [EEEG-to-text](https://arxiv.org/abs/2405.02165)
 
 - **Synthesizing real-world skills from unstructured data**
   - Leveraging information already available on the internet to train intelligent systems.

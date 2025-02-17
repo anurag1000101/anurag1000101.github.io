@@ -5,77 +5,56 @@ description: EEG to text translation
 img: assets/img/9.jpg
 importance: 2
 category: fun
-giscus_comments: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+**MindSync** is a novel framework that translates brain activity recorded via EEG signals into natural language text. The model is designed to handle both word-level EEG features and raw EEG waveforms.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## Model Pipeline
+1. **Preprocessing**:
+  - Dataset: ZuCo: [LINK](https://www.nature.com/articles/sdata2018291)
+  - Band-pass filtering and feature extraction applied to EEG signals.
+  - A pretrained feature extractor (DreamDiffusion) was employed to process raw EEG waves, reducing noise and improving signal clarity.
+  
+2. **EEG Feature Representation**:
+   - EEG features are mapped into a **vector-quantized (VQ-VAE)** discrete codex to stabilize input variability.
+   - The codex generated from transformer layers serves as an intermediary between EEG signals and the language model.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+3. **Text Generation**:
+   - Encoded EEG representations are passed to a **pretrained BART transformer** to generate corresponding text.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+4. **Training Process**:
+   - **Fine-tuning**: The model is fine-tuned using **cross-entropy loss** to optimize text predictions.
 
 <div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-12 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/mindsync/mindsync_method.png" title="method" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+### Two-Stage Training Approach:
+1. **Stage 1**: Learn discrete EEG representations without updating the language model.
+2. **Stage 2**: Fine-tune the full system with lower learning rates to ensure stable optimization.
+
+## Experimental Results
+- The model was trained on the **ZuCo** dataset, which contains EEG signals recorded during natural reading.
+- **Performance**: Outperformed prior models with a **BLEU-1 score** of **29.6** for raw EEG-to-text conversion, surpassing the previous best score of **21**.
+- Examples of output: 
+  **Predicted:** was in the United States Army from a Republican from 1955 from is is is ( ( ( ( ( ( ( ( ( (
+  **Ground Truth:** He served in the United States Senate as a Republican from Minnesota.
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-12 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/mindsync/results_mindsync.png" title="results" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+
+## Contributors
+- **Yash Sharma**
+- **Anurag Maurya**
+- **Avni Mittal**
 
 {% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
 
 {% endraw %}
