@@ -125,6 +125,11 @@ ninja.data = [{
           description: "2D and 3D navigation of a robotic wheelchair",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Wheelchair/";
+            },},{id: "projects-diff-bpp",
+          title: 'Diff-BPP',
+          description: "Regular Bin packing using diffusion models",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/diff-BPP/";
             },},{
         id: 'social-email',
         title: 'email',
